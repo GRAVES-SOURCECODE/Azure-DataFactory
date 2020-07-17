@@ -1,0 +1,10 @@
+{
+	"name": "Blob ASDF",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"serviceEndpoint": "https://hr001.blob.core.windows.net"
+		}
+	}
+}
