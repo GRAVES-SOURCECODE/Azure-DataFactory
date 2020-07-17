@@ -1,0 +1,16 @@
+{
+	"name": "CommonDataServiceForApps1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "CommonDataServiceForApps",
+		"typeProperties": {
+			"deploymentType": "Online",
+			"serviceUri": "https://orgda48cf71.crm.dynamics.com/",
+			"authenticationType": "AADServicePrincipal",
+			"servicePrincipalCredentialType": "ServicePrincipalKey",
+			"servicePrincipalId": "storageexplorer://v=1&accountid=%2Fsubscriptions%2F9459e454-396e-4df8-b17d-ca03afb42d97%2FresourceGroups%2FLE-SSAS%2Fproviders%2FMicrosoft.Storage%2FstorageAccounts%2Flestoragenorth&subscriptionid=9459e454-396e-4df8-b17d-ca03afb42d97&resourcetype=Azure.FileShare&resourcename=filesharenorth",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIlNDUy1BWkRGXzZiNTc5MTJjLWJiZjYtNGVmOC04NjFlLWNjMGU5MWUxMzEyOSINCn0="
+		}
+	}
+}
