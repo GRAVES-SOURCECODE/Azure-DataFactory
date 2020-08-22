@@ -1,0 +1,12 @@
+{
+	"name": "CDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "CommonDataServiceForApps1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "CommonDataServiceForAppsEntity",
+		"schema": []
+	}
+}
