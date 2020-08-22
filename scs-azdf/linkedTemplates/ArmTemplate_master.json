@@ -1,0 +1,70 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "scs-azdf"
+		},
+		"CommonDataServiceForApps1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'CommonDataServiceForApps1'"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://adfkeyvaultscs.vault.azure.net/"
+		},
+		"Blob ASDF_properties_typeProperties_serviceEndpoint": {
+			"type": "string",
+			"defaultValue": "https://hr001.blob.core.windows.net"
+		},
+		"CommonDataServiceForApps1_properties_typeProperties_username": {
+			"type": "string",
+			"defaultValue": "christopher.graves@arvato.com"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "scs-azdf_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"CommonDataServiceForApps1_password": {
+						"value": "[parameters('CommonDataServiceForApps1_password')]"
+					},
+					"AzureKeyVault1_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
+					},
+					"Blob ASDF_properties_typeProperties_serviceEndpoint": {
+						"value": "[parameters('Blob ASDF_properties_typeProperties_serviceEndpoint')]"
+					},
+					"CommonDataServiceForApps1_properties_typeProperties_username": {
+						"value": "[parameters('CommonDataServiceForApps1_properties_typeProperties_username')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "scs-azdf"
+		},
+		"CommonDataServiceForApps1_password": {
+			"value": ""
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://adfkeyvaultscs.vault.azure.net/"
+		},
+		"Blob ASDF_properties_typeProperties_serviceEndpoint": {
+			"value": "https://hr001.blob.core.windows.net"
+		},
+		"CommonDataServiceForApps1_properties_typeProperties_username": {
+			"value": "christopher.graves@arvato.com"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
