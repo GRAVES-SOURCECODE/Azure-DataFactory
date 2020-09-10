@@ -1,0 +1,15 @@
+{
+	"name": "SourceDataset_aa9",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "CommonDataServiceForApps1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "CommonDataServiceForAppsEntity",
+		"schema": [],
+		"typeProperties": {
+			"entityName": "msdyn_octeamschannelconfig"
+		}
+	}
+}
