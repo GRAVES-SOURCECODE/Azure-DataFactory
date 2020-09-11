@@ -1,0 +1,25 @@
+{
+	"name": "SCS_GP7",
+	"properties": {
+		"annotations": [],
+		"type": "SapBw",
+		"typeProperties": {
+			"server": "gp7-als.server.arvato-systems-de",
+			"systemNumber": "GTLNMIWVM2020:6400",
+			"clientId": "410",
+			"userName": "GRAV023",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "SAP"
+			}
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
