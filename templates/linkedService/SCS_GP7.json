@@ -18,7 +18,7 @@
 			}
 		},
 		"connectVia": {
-			"referenceName": "integrationRuntime1",
+			"referenceName": "integrationRuntime34",
 			"type": "IntegrationRuntimeReference"
 		}
 	}
